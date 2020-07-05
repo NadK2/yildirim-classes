@@ -3,7 +3,7 @@
   "description": "Yildirim Classes Package",
   "type": "library",
   "license": "MIT",
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
       "Yildirim\\Classes\\": "src/classes/",
@@ -19,7 +19,7 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "1.0-dev"
+      "dev-master": "1.0"
     }
   }
 }
