@@ -1,0 +1,26 @@
+{
+  "name": "yildirim/classes",
+  "description": "Yildirim Classes Package",
+  "type": "library",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "Yildirim\\Classes\\": "src/classes/",
+      "Yildirim\\Traits\\": "src/traits/",
+      "Yildirim\\Interfaces\\": "src/interfaces/"
+    },
+    "files": [
+      "src/functions.php"
+    ]
+  },
+  "require": {
+    "symfony/var-dumper": "^5.1"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  }
+}
