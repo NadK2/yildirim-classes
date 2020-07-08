@@ -3,7 +3,6 @@
   "description": "Yildirim Classes Package",
   "type": "library",
   "license": "MIT",
-  "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
       "Yildirim\\Classes\\": "src/classes/",
