@@ -1,3 +1,3 @@
 # yildirim-classes
 
-class package used by yildirim various components.
+class package used by various yildirim packages.
