@@ -68,6 +68,16 @@ class Collection implements ArrayAccess, Iterator, Jsonable, Arrayable
     }
 
     /**
+     * except
+     *
+     * @return void
+     */
+    public function except($keys)
+    {
+        return call_user_func_array([$this, 'only'], array_diff($this->keys()->toArray(), (array) func_get_args()));
+    }
+
+    /**
      * filter
      *
      * @param  mixed $callback
@@ -122,7 +132,7 @@ class Collection implements ArrayAccess, Iterator, Jsonable, Arrayable
     /**
      * keys
      *
-     * @return void
+     * @return static
      */
     public function keys()
     {

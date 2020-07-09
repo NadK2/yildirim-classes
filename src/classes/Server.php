@@ -28,4 +28,33 @@ class Server
 
     }
 
+    /**
+     * document_root
+     *
+     * @return string
+     */
+    public function document_root()
+    {
+        return $this->attributes['DOCUMENT_ROOT'];
+    }
+
+    /**
+     * protocol
+     *
+     * @return string
+     */
+    public function protocol()
+    {
+        return $this->attributes['SERVER_PROTOCOL'];
+    }
+
+    /**
+     * user_ip
+     *
+     * @return string
+     */
+    public function ip()
+    {
+        return $this->attributes['REMOTE_ADDR'];
+    }
 }
