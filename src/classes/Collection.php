@@ -170,9 +170,9 @@ class Collection implements ArrayAccess, Iterator, Jsonable, Arrayable
      *
      * @return array
      */
-    public function pluck($column)
+    public function pluck($column, $key = null)
     {
-        return array_column($this->toArray(), $column);
+        return array_column($this->toArray(), $column, $key);
     }
 
     /**
@@ -329,4 +329,5 @@ class Collection implements ArrayAccess, Iterator, Jsonable, Arrayable
     {
         return $this->toJson();
     }
+
 }

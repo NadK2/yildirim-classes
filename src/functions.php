@@ -78,6 +78,11 @@ if (!function_exists('server')) {
 }
 
 if (!function_exists('root_path')) {
+    /**
+     * root_path
+     *
+     * @return string
+     */
     function root_path()
     {
         return server()->document_root();
@@ -98,5 +103,21 @@ if (!function_exists('throwException')) {
     function throwException($type = 'Exception', $message = '', $code = 0, $previous = null)
     {
         return new Yildirim\Classes\Exception($type, $message, $code, $previous);
+    }
+}
+
+if (!function_exists('session')) {
+    /**
+     * session
+     *
+     * @return mixed
+     */
+    function session($key = null, $defualt = null)
+    {
+        if (!app()->has('session')) {
+            app()->setInstance('session', new Yildirim\Classes\Session());
+        }
+
+        return $key ? app('session')->get($key, $defualt) : app('session');
     }
 }

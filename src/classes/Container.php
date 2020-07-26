@@ -240,4 +240,15 @@ class Container
         return Router::processRequest();
     }
 
+    /**
+     * enableCsrf
+     *
+     * @param  mixed $bool
+     * @return void
+     */
+    public function enableCsrf(bool $bool)
+    {
+        Router::$csrfEnabled = $bool;
+    }
+
 }
